@@ -3,34 +3,25 @@
   적용: github.com/dakcoe/dakcoe 저장소(Public)를 만들고 이 파일을 README.md로 올리면 프로필 상단에 표시됨
 -->
 
-<div align="center">
+# dakcoe
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=180&section=header&text=dakcoe&fontColor=ffffff&fontSize=56&fontAlignY=35&desc=AI%2FML%20%C2%B7%20Backend%20Developer&descAlignY=58&descSize=18" width="100%"/>
+**AI/ML · Backend** — 직접 쓰려고 만든 도구를 공개합니다.
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=800&color=2C5364&center=true&vCenter=true&width=520&lines=Building+AI-powered+tools+that+I+actually+use;LLM+%C2%B7+RAG+%C2%B7+Agents+%C2%B7+Backend" />
-
-</div>
+<p>
+  <a href="mailto:superbleo2003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://www.youtube.com/@dakcoe_303"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"/></a>
+  <a href="https://github.com/dakcoe?tab=followers"><img src="https://img.shields.io/github/followers/dakcoe?style=flat-square&logo=github&label=Followers&color=333" alt="Followers"/></a>
+</p>
 
 ## About
 
 - 한동대학교 AICE 전공
 - 코딩 동아리 **슬기짜기** 부회장
 - AI/ML과 Backend 개발에 관심 — LLM 응용, 에이전트, 자동화 파이프라인
-- 직접 쓰려고 만든 도구를 공개하는 편
-
-<p>
-  <a href="mailto:superbleo2003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"/></a>
-  <a href="https://www.youtube.com/@dakcoe_303"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white"/></a>
-</p>
 
 ## Projects
 
 ### Open Source
-
-<p>
-  <a href="https://github.com/dakcoe/dev-news"><img src="https://github-readme-stats.vercel.app/api/pin/?username=dakcoe&repo=dev-news&theme=transparent&hide_border=true" width="49%"/></a>
-  <a href="https://github.com/dakcoe/study-assistant"><img src="https://github-readme-stats.vercel.app/api/pin/?username=dakcoe&repo=study-assistant&theme=transparent&hide_border=true" width="49%"/></a>
-</p>
 
 | Project | 설명 | Stack |
 |---|---|---|
@@ -47,11 +38,6 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=dakcoe&show_icons=true&include_all_commits=true&count_private=true&theme=transparent&hide_border=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dakcoe&layout=compact&langs_count=6&theme=transparent&hide_border=true" height="165"/>
-
 <img src="https://streak-stats.demolab.com?user=dakcoe&theme=transparent&hide_border=true" height="165"/>
 
 </div>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=100&section=footer" width="100%"/>
