@@ -10,7 +10,6 @@
 <p>
   <a href="mailto:superbleo2003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://www.youtube.com/@dakcoe_303"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"/></a>
-  <a href="https://github.com/dakcoe?tab=followers"><img src="https://img.shields.io/github/followers/dakcoe?style=flat-square&logo=github&label=Followers&color=333" alt="Followers"/></a>
 </p>
 
 ## About
