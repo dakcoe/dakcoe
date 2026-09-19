@@ -34,7 +34,7 @@
 
 | Project | 설명 | Stack |
 |---|---|---|
-| [**dev-news**](https://github.com/dakcoe/dev-news) · [dev-news.net](https://dev-news.net/) | 개발·AI 뉴스를 하루 3번 수집 → 점수화·중복 제거 → LLM 요약까지 해서 정적 페이지로 발행. GitHub Actions로 서버 없이 구동 중 | Python, LLM, GitHub Actions |
+| [**dev-news**](https://github.com/dakcoe/dev-news) · [dev-news.net](https://dev-news.net/) | 개발·AI 뉴스를 하루 3번 수집 → 점수화·중복 제거 → LLM 요약까지 해서 정적 페이지로 발행. 스케줄러가 수집부터 배포까지 자동으로 처리 | Python, LLM, GitHub Pages |
 | [**study-assistant**](https://github.com/dakcoe/study-assistant) · [다운로드](https://github.com/dakcoe/study-assistant/releases) | 강의를 받아 적고 번역하고 AI에게 질문하는 데스크탑 앱. macOS · Windows 빌드 배포 중 | Python, Whisper, Groq, CustomTkinter |
 
 ### Other Work
