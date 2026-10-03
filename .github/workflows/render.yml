@@ -1,0 +1,54 @@
+name: render panels
+
+# dev-news.net 은 KST 00·08·16시에 수집하고 6분쯤 뒤에 발행한다. 그 30여 분 뒤에 돈다.
+on:
+  schedule:
+    - cron: '37 7,15,23 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/**', '.github/workflows/render.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install 'fonttools[woff]==4.*'
+
+      - name: Download IBM Plex
+        run: |
+          mkdir fonts
+          base=https://raw.githubusercontent.com/google/fonts/9710da1eacb3be272583c3224dcb70f9da6eadbb/ofl
+          curl -sfL -o fonts/IBMPlexMono-Regular.ttf  $base/ibmplexmono/IBMPlexMono-Regular.ttf
+          curl -sfL -o fonts/IBMPlexMono-SemiBold.ttf $base/ibmplexmono/IBMPlexMono-SemiBold.ttf
+          curl -sfL -o fonts/IBMPlexSansKR-Regular.ttf $base/ibmplexsanskr/IBMPlexSansKR-Regular.ttf
+
+      - name: Render
+        run: python scripts/render.py --out dist --fonts fonts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # output 브랜치는 매번 커밋 하나로 덮어쓴다. main 에 봇 커밋이 쌓이지 않는다
+      - name: Publish to output branch
+        run: |
+          cd dist
+          git init -q -b output
+          git add .
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -qm "render $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -qf "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
