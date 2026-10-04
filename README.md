@@ -27,6 +27,13 @@
 | [**dev-news**](https://github.com/dakcoe/dev-news) · [dev-news.net](https://dev-news.net/) | 개발·AI 뉴스를 하루 3번 수집 → 점수화·중복 제거 → LLM 요약까지 해서 정적 페이지로 발행. 스케줄러가 수집부터 배포까지 자동으로 처리 | Python, LLM, GitHub Pages |
 | [**study-assistant**](https://github.com/dakcoe/study-assistant) · [다운로드](https://github.com/dakcoe/study-assistant/releases) | 강의를 받아 적고 번역하고 AI에게 질문하는 데스크탑 앱. macOS · Windows 빌드 배포 중 | Python, Whisper, Groq, CustomTkinter |
 
+<a href="https://dev-news.net/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dakcoe/dakcoe/output/dev-news-dark.svg">
+    <img src="https://raw.githubusercontent.com/dakcoe/dakcoe/output/dev-news-light.svg" alt="dev-news.net이 오늘 모은 기사 제목" width="100%">
+  </picture>
+</a>
+
 ### Other Work
 
 | Project | 설명 | 기간 · 역할 | Stack |
@@ -35,8 +42,7 @@
 
 ## GitHub Stats
 
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=dakcoe&theme=transparent&hide_border=true" height="165"/>
-
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dakcoe/dakcoe/output/contributions-dark.svg">
+  <img src="https://raw.githubusercontent.com/dakcoe/dakcoe/output/contributions-light.svg" alt="최근 1년 기여 기록" width="100%">
+</picture>
