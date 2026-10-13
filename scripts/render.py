@@ -94,8 +94,18 @@ text{{font-family:{MONO};fill:{t['tx']}}}
 </svg>'''
 
 
-def cut(s, n):
-    return s if len(s) <= n else s[:n - 1] + '…'
+def cut(s, size, width):
+    """폭(px)에 맞춰 자른다. 한글·전각은 1em, 나머지는 0.55em 으로 어림한다"""
+    em = lambda c: 1.0 if ord(c) > 0x2e7f else 0.55
+    if sum(em(c) for c in s) * size <= width:
+        return s
+    room, out = width / size - em('…'), ''
+    for c in s:
+        room -= em(c)
+        if room < 0:
+            break
+        out += c
+    return out.rstrip() + '…'
 
 
 def contributions(t, cal):
@@ -133,7 +143,7 @@ def contributions(t, cal):
                 body.append(f'<rect class="c" x="{x}" y="{y}" width="{cs}" height="{cs}" rx="2" fill="{t["lv"][level(v)]}" style="animation-delay:{order*0.11:.2f}s"/>')
                 order += 1
     body.append('</g>')
-    body.append(f'<text x="28" y="{y0+7*(cs+gap)+30}" font-size="11" fill="{t["tx3"]}">한 칸 = 하루. 커밋한 날만 위에서 떨어져 쌓입니다 · {cal["active"]} active days · {cal["from"][:7]} → {cal["to"][:7]}</text>')
+    body.append(f'<text x="28" y="{y0+7*(cs+gap)+30}" font-size="11" fill="{t["tx3"]}">{cal["active"]} active days · {cal["from"][:7]} → {cal["to"][:7]}</text>')
     return svg(y0 + 7 * (cs + gap) + 50, '\n'.join(body), css, t, f'{LOGIN} contributions')
 
 
@@ -156,7 +166,6 @@ def dev_news(t, news):
         y, dl = y0 + r * rh, r * 0.18
         body.append(f'<g class="row" style="animation-delay:{dl:.2f}s">')
         body.append(f'<rect x="28" y="{y}" width="{W-56}" height="{rh-6}" rx="3" fill="{t["bg"]}" stroke="{t["line"]}"/>')
-        body.append(f'<line x1="28" x2="{W-28}" y1="{y+(rh-6)/2}" y2="{y+(rh-6)/2}" stroke="{t["line"]}"/>')
         for cls, it in (('a', items[r]), ('b', items[r + rows])):
             name, col = SOURCES.get(it['s'], (it['s'], t['tx3']))
             fg = t['gh_fg'] if col is None else '#ffffff'
@@ -164,11 +173,10 @@ def dev_news(t, news):
             body.append(f'<g class="{cls}" style="animation-delay:{dl:.2f}s">'
                         f'<rect x="36" y="{y+7}" width="100" height="16" rx="3" fill="{col}"/>'
                         f'<text x="86" y="{y+19}" font-size="10.5" text-anchor="middle" font-weight="600" style="fill:{fg}">{html.escape(name)}</text>'
-                        f'<text class="kr" x="150" y="{y+20}" font-size="13.5">{html.escape(cut(it["t"], 38))}</text>'
+                        f'<text class="kr" x="150" y="{y+20}" font-size="13.5">{html.escape(cut(it["t"], 13.5, W - 150 - 140))}</text>'
                         f'<text x="{W-40}" y="{y+20}" font-size="11" text-anchor="end" fill="{t["pri"]}">{html.escape(it["g"] or "-")}</text></g>')
         body.append('</g>')
-    body.append(f'<text x="28" y="{y0+rows*rh+30}" font-size="11" fill="{t["tx3"]}">dev-news.net이 그날 모은 기사 제목이 6초마다 넘어갑니다</text>')
-    return svg(y0 + rows * rh + 46, '\n'.join(body), css, t, 'dev-news arrivals')
+    return svg(y0 + rows * rh + 26, '\n'.join(body), css, t, 'dev-news arrivals')
 
 
 # ── fonts ─────────────────────────────────────────────────────────────────
