@@ -25,7 +25,7 @@
 | Project | 설명 | Stack |
 |---|---|---|
 | [**dev-news**](https://github.com/dakcoe/dev-news) · [dev-news.net](https://dev-news.net/) | 개발·AI 뉴스를 하루 3번 수집 → 점수화·중복 제거 → LLM 요약까지 해서 정적 페이지로 발행. 스케줄러가 수집부터 배포까지 자동으로 처리 | Python, LLM, GitHub Pages |
-| [**Study AI**](https://github.com/dakcoe/study-AI) · [다운로드](https://github.com/dakcoe/study-AI/releases/latest) | 강의를 받아 적고 한국어로 옮기고, 모르는 장면은 AI가 화면을 짚어 가며 설명하는 Mac 메뉴바 앱. macOS 배포 중 · Windows 판 준비 중 | Swift, SwiftUI, Groq Whisper, Claude·Gemini·GPT |
+| [**Ezrite**](https://github.com/dakcoe/ezrite) · [다운로드](https://github.com/dakcoe/ezrite/releases/latest) | 강의를 받아 적고 한국어로 옮기고, 모르는 장면은 AI가 화면을 짚어 가며 설명하는 Mac 메뉴바 앱. macOS 배포 중 · Windows 판 준비 중 | Swift, SwiftUI, Groq Whisper, Claude·Gemini·GPT |
 
 ### Other Work
 
