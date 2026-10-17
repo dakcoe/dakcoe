@@ -8,7 +8,7 @@
 **AI/ML · Backend** — 직접 쓰려고 만든 도구를 공개합니다.
 
 <p>
-  <a href="mailto:superbleo2003@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="mailto:devdako303@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://www.youtube.com/@dakcoe_303"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube"/></a>
 </p>
 
