@@ -5,7 +5,7 @@
 
 # dakcoe
 
-**AI/ML · Backend** — 직접 쓰려고 만든 도구를 공개합니다.
+**AI/ML** 
 
 <p>
   <a href="mailto:devdako303@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
